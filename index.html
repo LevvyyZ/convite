@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Responsiva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #525252;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse as bordas */
+        }
+
+        .imagem {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto; /* A largura se ajusta automaticamente */
+            height: auto; /* A altura se ajusta automaticamente */
+            object-fit: cover; /* Mantém o aspecto correto sem distorção */
+        }
+
+        /* Ajuste específico para telas menores, garantindo que a imagem se ajuste bem no celular */
+        @media (max-width: 768px) {
+            .container {
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="imagem/convite-site (1).jpeg" alt="Imagem" class="imagem">
+    </div>
+
+</body>
+</html>
